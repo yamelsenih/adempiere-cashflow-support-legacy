@@ -19,7 +19,7 @@ if (JavaVersion.current().isJava8Compatible()) {
 }
 
 dependencies {
-    api 'io.github.adempiere:project:3.9.4-develop-1.0'
+    api 'io.github.adempiere:cashflow:3.9.4-develop-1.1'
 }
 
 sourceSets {
@@ -44,7 +44,7 @@ version = "1.0.0"
 
 jar {
     manifest {
-        attributes("Implementation-Title": "Adempiere Project Management",
+        attributes("Implementation-Title": "Adempiere Cashflow Management",
                    "Implementation-Version": version, 
                    "EntityType": entityType)
     }
@@ -63,12 +63,12 @@ publishing {
     publications {
         mavenJava(MavenPublication) {
         	groupId 'io.github.adempiere'
-            artifactId 'template-support-legacy'
+            artifactId 'cashflow-support-legacy'
             version
            	from components.java
            	pom {
-                name = 'Template'
-                description = 'Legacy library for old implementations of template management. Please note that this library will be deprecated'
+                name = 'Cashflow'
+                description = 'Legacy library for old implementations of cashflow management. Please note that this library will be deprecated'
                 url = 'http://adempiere.io/'
                 licenses {
                     license {
@@ -84,9 +84,9 @@ publishing {
                     }
                 }
                 scm {
-                    connection = 'scm:git:git://github.com/adempiere/adempiere-template-support-legacy.git'
-                    developerConnection = 'scm:git:ssh://github.com/adempiere/adempiere-template-support-legacy.git'
-                    url = 'http://github.com/adempiere/adempiere-template-support-legacy'
+                    connection = 'scm:git:git://github.com/adempiere/adempiere-cashflow-support-legacy.git'
+                    developerConnection = 'scm:git:ssh://github.com/adempiere/adempiere-cashflow-support-legacy.git'
+                    url = 'http://github.com/adempiere/adempiere-cashflow-support-legacy'
                 }
             }
 		}
